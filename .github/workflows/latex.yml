@@ -3,7 +3,7 @@ name: LaTeX Workflow
 on:
   push:
     paths:
-      - 'doc/*.tex'
+      - 'doc/memoria.tex'
 
 jobs:
 
@@ -16,7 +16,7 @@ jobs:
         id: textidote
         with:
           working_directory: doc
-          root_file: proyecto.tex
+          root_file: memoria.tex
       
       - name: Subir informe de TeXtidote
         uses: actions/upload-artifact@v4
