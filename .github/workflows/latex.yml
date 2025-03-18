@@ -17,6 +17,7 @@ jobs:
         with:
           working_directory: doc
           root_file: memoria.tex
+          report_file: report.html
       
       - name: Subir informe de TeXtidote
         uses: actions/upload-artifact@v4
@@ -26,7 +27,7 @@ jobs:
       
       - name: Lanzar error si existen advertencias de TeXtidote 
         if: ${{ steps.textidote.outputs.num_warnings != 0 }}
-        run: 'echo "::error file=main.tex::num_warnings: ${{ steps.textidote.outputs.num_warnings }}"; exit 1;'
+        run: 'echo "::error file=memoria.tex::num_warnings: ${{ steps.textidote.outputs.num_warnings }}"; exit 1;'
 
       - name: Compilar memoria
         uses: xu-cheng/latex-action@v3
