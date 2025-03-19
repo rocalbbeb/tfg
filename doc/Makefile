@@ -4,6 +4,4 @@ all: memoria.pdf
 
 memoria.pdf: $(DOC)  
 	pdflatex $<  
-	bibtex $(basename $<)  
 	pdflatex $<  
-	pdflatex $<
