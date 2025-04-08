@@ -1,10 +1,67 @@
-\documentclass[a4paper,12pt]{book}
+\documentclass[12pt,a4paper,twoside]{book}
+
+\usepackage[T1]{fontenc}   
+\usepackage[utf8]{inputenc}
+\usepackage[main=spanish, provide=*]{babel}
+
+\usepackage{graphicx}
+
+\renewcommand{\baselinestretch}{1.5} 
+
+% Márgenes de la página
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=25mm,
+    right=25mm,
+    top=20mm,
+    bottom=25mm
+}
 
 \begin{document}
 
-\title{Trabajo de Fin de Grado: Análisis de consumo energético en algoritmos evolutivos en lenguajes de bajo nivel}
-\author{Rocío Alberca Bebia}
-\date{\today}
-\maketitle
+\begin{titlepage}
+
+\begin{center}
+
+% Logo de la universidad
+\includegraphics[width=10cm]{logo-ugr.png}
+
+\vspace{8mm}
+
+
+{\fontsize{14pt}{16pt} \selectfont GRADO EN INGENIERÍA INFORMÁTICA}
+
+\vspace{8mm}
+
+
+{\fontsize{14pt}{16pt} \selectfont TRABAJO FIN DE GRADO}
+
+\vspace{10mm}
+
+{\Large \textbf{ANÁLISIS DE CONSUMO ENERGÉTICO EN ALGORITMOS EVOLUTIVOS EN LENGUAJES DE BAJO NIVEL}} 
+
+\vspace{25mm}
+
+{\textmd{Presentado por:}} 
+
+{\textmd{Dª. Rocío Alberca Bebia}}
+
+\vspace{2mm}
+
+{\textmd{Tutor:}} 
+
+{\textmd{D. Juan Julián Merelo Guervos}}
+
+\vspace{12mm}
+
+{\textmd{\textnormal{2024 / 2025}}}
+
+\vspace{2mm}
+
+{\textmd{ETS de Ingenierías Informática y de Telecomunicación}}
+\end{center}
+
+\end{titlepage}
 
 \end{document}
