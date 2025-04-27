@@ -9,4 +9,4 @@ doc/*.out
 doc/*.tocbcf
 doc/*.run.xml
 doc/*-blx.bib
-
+doc/*.bcf
