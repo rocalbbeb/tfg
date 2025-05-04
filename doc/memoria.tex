@@ -11,20 +11,23 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[main=spanish, provide=*]{babel}
-\usepackage[backend=bibtex8, style=numeric]{biblatex}
+\usepackage[backend=bibtex8, style=numeric, sorting=none]{biblatex}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{parskip}
 \addbibresource{bibliografia.bib}
 
 \begin{document}
 
 \frontmatter
+
 \include{portada}
 
 \tableofcontents
 
 \mainmatter
 
+\setlength{\parskip}{3mm}
 \include{introduccion}
 
 \backmatter
