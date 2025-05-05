@@ -6,7 +6,6 @@ on:
       - 'doc/*.tex'
 
 jobs:
-
   docs-tests:
     runs-on: ubuntu-latest
     steps:
