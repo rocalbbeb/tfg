@@ -16,8 +16,23 @@ Para avanzar hacia esta computación sostenible, resulta esencial identificar la
 
 \section{Importancia de la optimización energética en algoritmos evolutivos}
 
-Los algoritmos evolutivos son métodos computacionales que resuelven problemas de búsqueda y optimización inspirándose en los procesos de evolución natural, como la selección natural, la reproducción y la mutación, para encontrar soluciones aproximadas a problemas complejos. Estos algoritmos operan sobre una población de soluciones candidatas que evolucionan iterativamente mediante operadores biológicamente inspirados, tales como la selección, el cruce y la mutación, con el objetivo de mejorar su calidad según un criterio definido.
+Los algoritmos evolutivos (EAs) son métodos computacionales que resuelven problemas de búsqueda y optimización inspirándose en los procesos de evolución natural, como la selección natural, la reproducción y la mutación, para encontrar soluciones aproximadas a problemas complejos. Estos algoritmos operan sobre una población de soluciones candidatas que evolucionan iterativamente mediante operadores biológicamente inspirados, tales como la selección, el cruce y la mutación, con el objetivo de mejorar su calidad según un criterio definido.
 
+Tradicionalmente, su rendimiento se analiza teniendo en cuenta la calidad de la solución (fitness) y el tiempo de cómputo, y se comparan diferentes versiones de estos algoritmos según cómo afectan sus operadores evolutivos a esas dos métricas. Sin embargo, hoy en día los investigadores también se enfrentan al reto de considerar la eficiencia energética, lo que implica estudiar el consumo de energía de los algoritmos.
+
+En los resultados del estudio de investigación \cite{diaz2022population}, se puede observar que el tamaño de la población influye directamente en la energía consumida. También se estudió el uso de la memoria caché y se observó que, al aumentar el tamaño de la población, se incrementan de forma exponencial los fallos de caché, lo que repercute en el consumo energético. Este estudio demuestra que no basta con analizar el tiempo de ejecución o la calidad de la solución, sino que también es importante tener en cuenta la energía necesaria para encontrar esa solución. Aunque el trabajo se centra en algoritmos genéticos, los resultados podrían extrapolarse también a otros algoritmos evolutivos.
+
+Existen diversos factores de los algoritmos evolutivos que pueden tener un impacto significativo en su consumo de energía:
+
+\begin{itemize}
+    \item \textbf{Evaluación repetitiva de funciones de aptitud (fitness)}: En muchos problemas, las funciones de evaluación son complejas y requieren un alto costo computacional, lo que incrementa el consumo de energía.\cite{pillai2018genetic}
+    \item \textbf{Accesos intensivos a memoria}: Las grandes poblaciones y el uso de estructuras de datos complejas en algoritmos evolutivos resulta en un mayor uso de memoria, lo cual puede generar más fallos de caché y aumentar el acceso a la memoria principal, incrementando así el consumo de energía.\cite{diaz2023multi}
+    \item \textbf{Operadores estocásticos a gran escala}: Los operadores como la mutación y el cruce se aplican a muchos individuos y en muchas generaciones, lo que multiplica la carga de trabajo computacional. \cite{mendoza2017stochastic}
+    \item \textbf{Funciones aleatorias (generadores de números pseudoaleatorios)}: Los operadores estocásticos dependen de generadores de números aleatorios, que también suponen un coste computacional acumulado al ser invocados repetidamente. \cite{jamil2022analyzing}
+    \item \textbf{Elevado número de generaciones para convergencia}: Dado que la mejora de la solución es progresiva, muchos algoritmos necesitan miles de generaciones, lo que implica muchas evaluaciones y transformaciones de soluciones. \cite{diaz2021population}
+    \item \textbf{Paralelismo y uso intensivo de recursos}: Al implementarse en arquitecturas paralelas o distribuidas para ganar rendimiento, puede aumentar el consumo global si no se gestiona de forma eficiente. \cite{medeiros2020distributed}
+\end{itemize}
+  
 %\section{Preguntas de investigación}
 
 %\section{Hipótesis y objetivos}
