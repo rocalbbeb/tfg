@@ -1,67 +1,36 @@
-\documentclass[12pt,a4paper,twoside]{book}
+\documentclass[a4paper,12pt,oneside]{book}
 
-\usepackage[T1]{fontenc}   
-\usepackage[utf8]{inputenc}
-\usepackage[main=spanish, provide=*]{babel}
-
-\usepackage{graphicx}
-
-\renewcommand{\baselinestretch}{1.5} 
-
-% Márgenes de la página
 \usepackage{geometry}
 \geometry{
     a4paper,
     left=25mm,
     right=25mm,
-    top=20mm,
+    top=25mm,
     bottom=25mm
 }
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[main=spanish, provide=*]{babel}
+\usepackage[backend=bibtex8, style=numeric, sorting=none]{biblatex}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{parskip}
+\addbibresource{bibliografia.bib}
 
 \begin{document}
 
-\begin{titlepage}
+\frontmatter
 
-\begin{center}
+\include{portada}
 
-% Logo de la universidad
-\includegraphics[width=10cm]{logo-ugr.png}
+\tableofcontents
 
-\vspace{8mm}
+\mainmatter
 
+\setlength{\parskip}{3mm}
+\include{introduccion}
 
-{\fontsize{14pt}{16pt} \selectfont GRADO EN INGENIERÍA INFORMÁTICA}
-
-\vspace{8mm}
-
-
-{\fontsize{14pt}{16pt} \selectfont TRABAJO FIN DE GRADO}
-
-\vspace{10mm}
-
-{\Large \textbf{ANÁLISIS DE CONSUMO ENERGÉTICO EN ALGORITMOS EVOLUTIVOS EN LENGUAJES DE BAJO NIVEL}} 
-
-\vspace{25mm}
-
-{\textmd{Presentado por:}} 
-
-{\textmd{Dª. Rocío Alberca Bebia}}
-
-\vspace{2mm}
-
-{\textmd{Tutor:}} 
-
-{\textmd{D. Juan Julián Merelo Guervos}}
-
-\vspace{12mm}
-
-{\textmd{\textnormal{2024 / 2025}}}
-
-\vspace{2mm}
-
-{\textmd{ETS de Ingenierías Informática y de Telecomunicación}}
-\end{center}
-
-\end{titlepage}
+\backmatter
+\printbibliography
 
 \end{document}

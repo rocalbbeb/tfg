@@ -1,0 +1,30 @@
+\chapter{Introducción}
+
+El avance en inteligencia artificial ha traído consigo un aumento significativo del consumo energético asociado a sus métodos computacionales. En este trabajo se analiza, en concreto, el impacto energético de los algoritmos evolutivos implementados en lenguajes de bajo nivel. Este capítulo introduce el contexto del problema, la relevancia de la eficiencia energética en inteligencia computacional y las motivaciones que justifican este estudio.
+
+\section{Contextualización del problema energético en inteligencia computacional}
+
+La inteligencia computacional es una rama de la inteligencia artificial que se centra en desarrollar sistemas inteligentes inspirados en la naturaleza y el razonamiento humano. Entre sus principales enfoques se encuentran las redes neuronales artificiales, que imitan el funcionamiento del sistema nervioso, y los algoritmos de optimización bioinspirados, como los algoritmos evolutivos, que constituyen el objeto de estudio de este trabajo. \cite{dasci_ic}
+
+La inteligencia artificial (IA) ha experimentado un crecimiento exponencial en los últimos años, lo que ha provocado importantes implicaciones medioambientales. Según estimaciones recientes de 2023 reflejadas en \cite{cotta2024consumo}, los centros de datos dedicados al procesamiento de IA representan entre el 5\% y el 9\% de la demanda mundial de electricidad y generan aproximadamente el 2\% de las emisiones globales de CO2. Este impacto ambiental ha convertido la optimización energética en un aspecto crítico para el desarrollo de algoritmos de IA.
+
+A medida que el sector de la inteligencia artificial avanza a un ritmo acelerado, las leyes y regulaciones destinadas a controlar su impacto medioambiental evolucionan de forma más lenta. Como consecuencia, muchos proyectos de IA no aplican criterios de sostenibilidad en su desarrollo. A esta tendencia de creación y uso de tecnologías de IA sin considerar su huella ambiental se la conoce como \textbf{Red Computing} o \textbf{IA roja}. Bajo esta práctica, los investigadores priorizan obtener métricas precisas, aunque ello implique un coste computacional elevado.
+
+Por el contrario, se denomina \textbf{Green Computing} o \textbf{IA verde} a aquellas prácticas de computación que integran consideraciones medioambientales en su desarrollo, con el objetivo de alcanzar un equilibrio entre el rendimiento computacional y el coste energético. En este enfoque, no se persigue únicamente el avance tecnológico, sino que también se prioriza la sostenibilidad durante todo el proceso de desarrollo. \cite{zhou2023opportunities}
+
+Para avanzar hacia esta computación sostenible, resulta esencial identificar las métricas a evaluar. La eficiencia energética se ve influida por múltiples factores: desde la elección del lenguaje de programación hasta el compilador utilizado, el nivel de optimización aplicado y la arquitectura hardware en la que se ejecuta el código. De hecho, estudios recientes han mostrado diferencias significativas en el consumo energético de un mismo algoritmo dependiendo del lenguaje o del conjunto de instrucciones empleado \cite{lutz2021energy}.
+
+\section{Importancia de la optimización energética en algoritmos evolutivos}
+
+Los algoritmos evolutivos (EAs) son métodos computacionales que resuelven problemas de búsqueda y optimización inspirándose en los procesos de evolución natural, como la selección natural, la reproducción y la mutación, para encontrar soluciones aproximadas a problemas complejos. Estos algoritmos operan sobre una población de soluciones candidatas que evolucionan iterativamente mediante operadores biológicamente inspirados, tales como la selección, el cruce y la mutación, con el objetivo de mejorar su calidad según un criterio definido.
+
+Tradicionalmente, su rendimiento se analiza teniendo en cuenta la calidad de la solución (fitness) y el tiempo de cómputo, y se comparan diferentes versiones de estos algoritmos según cómo afectan sus operadores evolutivos a esas dos métricas. Los algoritmos evolutivos, al trabajar con múltiples soluciones y operadores aleatorios, suelen requerir muchas iteraciones y accesos intensivos a memoria, lo que puede impactar significativamente en el consumo energético. Hoy en día los investigadores también se enfrentan al reto de considerar la eficiencia energética, lo que implica estudiar el consumo de energía de los algoritmos.
+
+En los resultados del estudio de investigación \cite{diaz2022population}, se puede observar que el tamaño de la población influye directamente en la energía consumida. También se estudió el uso de la memoria caché y se observó que, al aumentar el tamaño de la población, se incrementan de forma exponencial los fallos de caché, lo que repercute en el consumo energético. Este estudio demuestra que no basta con analizar el tiempo de ejecución o la calidad de la solución, sino que también es importante tener en cuenta la energía necesaria para encontrar esa solución. Aunque el trabajo se centra en algoritmos genéticos, los resultados podrían extrapolarse también a otros algoritmos evolutivos.
+
+  
+%\section{Preguntas de investigación}
+
+%\section{Hipótesis y objetivos}
+
+%\section{Estructura de la memoria}

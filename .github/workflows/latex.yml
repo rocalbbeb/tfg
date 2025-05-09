@@ -3,10 +3,9 @@ name: LaTeX Workflow
 on:
   push:
     paths:
-      - 'doc/memoria.tex'
+      - 'doc/*.tex'
 
 jobs:
-
   docs-tests:
     runs-on: ubuntu-latest
     steps:
