@@ -12,7 +12,7 @@ A medida que el sector de la inteligencia artificial avanza a un ritmo acelerado
 
 Por el contrario, se denomina \textbf{Green Computing} o \textbf{IA verde} a aquellas prácticas de computación que integran consideraciones medioambientales en su desarrollo, con el objetivo de alcanzar un equilibrio entre el rendimiento computacional y el coste energético. En este enfoque, no se persigue únicamente el avance tecnológico, sino que también se prioriza la sostenibilidad durante todo el proceso de desarrollo. \cite{zhou2023opportunities}
 
-Para avanzar hacia esta computación sostenible, resulta esencial identificar las métricas a evaluar. La eficiencia energética se ve influida por múltiples factores: desde la elección del lenguaje de programación hasta el compilador utilizado, el nivel de optimización aplicado y la arquitectura hardware en la que se ejecuta el código. De hecho, estudios recientes han mostrado diferencias significativas en el consumo energético de un mismo algoritmo dependiendo del lenguaje o del conjunto de instrucciones empleado \cite{lutz2021energy}.
+Para avanzar hacia esta computación sostenible, resulta esencial identificar las métricas a evaluar. La eficiencia energética se ve influida por múltiples factores: desde la elección del lenguaje de programación hasta el compilador utilizado, el nivel de optimización aplicado y la arquitectura hardware en la que se ejecuta el código. De hecho, un estudio reciente ha evidenciado diferencias significativas en el consumo energético de un mismo algoritmo dependiendo del lenguaje, del conjunto de instrucciones empleado y del entorno de ejecución. Estos resultados justifican la necesidad de crear metodologías para medir y comparar dichas diferencias. \cite{lutz2021energy}
 
 \section{Importancia de la optimización energética en algoritmos evolutivos}
 
@@ -21,9 +21,22 @@ Los algoritmos evolutivos (EAs) son métodos computacionales que resuelven probl
 Tradicionalmente, su rendimiento se analiza teniendo en cuenta la calidad de la solución (fitness) y el tiempo de cómputo, y se comparan diferentes versiones de estos algoritmos según cómo afectan sus operadores evolutivos a esas dos métricas. Los algoritmos evolutivos, al trabajar con múltiples soluciones y operadores aleatorios, suelen requerir muchas iteraciones y accesos intensivos a memoria, lo que puede impactar significativamente en el consumo energético. Hoy en día los investigadores también se enfrentan al reto de considerar la eficiencia energética, lo que implica estudiar el consumo de energía de los algoritmos.
 
 En los resultados del estudio de investigación \cite{diaz2022population}, se puede observar que el tamaño de la población influye directamente en la energía consumida. También se estudió el uso de la memoria caché y se observó que, al aumentar el tamaño de la población, se incrementan de forma exponencial los fallos de caché, lo que repercute en el consumo energético. Este estudio demuestra que no basta con analizar el tiempo de ejecución o la calidad de la solución, sino que también es importante tener en cuenta la energía necesaria para encontrar esa solución. Aunque el trabajo se centra en algoritmos genéticos, los resultados podrían extrapolarse también a otros algoritmos evolutivos.
-
   
-%\section{Preguntas de investigación}
+\section{Preguntas de investigación}
+
+Como consecuencia de la problemática que supone el consumo energético en el ámbito de la inteligencia computacional, este trabajo, centrado en el estudio, las pruebas y el análisis de algoritmos genéticos, pretende responder a las siguientes preguntas de investigación:
+
+¿Qué diferencias en consumo energético se observan al implementar un mismo algoritmo evolutivo en C++ en un lenguaje de bajo nivel como Zig?
+
+¿Qué impacto tienen las opciones de compilación y los niveles de optimización del compilador en el consumo energético de los algoritmos evolutivos implementados en C++?
+
+¿Cómo influyen factores internos del diseño de un algoritmo evolutivo (como el tamaño de la población, las estructuras de datos utilizadas, los operadores genéticos y los criterios de parada) en su perfil energético?
+
+¿Qué efecto tiene el sistema de asignación de memoria en la eficiencia energética de una implementación de un algoritmo evolutivo en C++?
+
+¿Puede establecerse una metodología reproducible para medir y comparar el consumo energético entre distintas implementaciones (en diferentes lenguajes, compiladores u optimizaciones) de un mismo algoritmo evolutivo?
+
+¿Es posible reducir el consumo energético de los algoritmos evolutivos manteniendo resultados similares en calidad de solución y tiempo de ejecución?
 
 %\section{Hipótesis y objetivos}
 
