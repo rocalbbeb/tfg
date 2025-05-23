@@ -1,7 +1,7 @@
 DOC = memoria.tex
 OUT = memoria.pdf
 BIB = bibliografia.bib
-SRC = memoria.tex portada.tex introduccion.tex
+SRC = memoria.tex portada.tex introduccion.tex planificacion.tex
 
 all: $(OUT)
 
